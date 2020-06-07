@@ -34,6 +34,5 @@ public class InsertionSort {
         insertionSort(input);
         input = new int[]{1, 2, 3, 4, 5};
         insertionSort(input);
-
     }
 }
