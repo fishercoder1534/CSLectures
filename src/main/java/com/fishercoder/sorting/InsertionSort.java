@@ -9,23 +9,31 @@ public class InsertionSort {
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
     public static int[] insertionSort(int[] array) {
-        for (int i = 1; i < array.length; i++) {
-            int key = array[i];
-            int j = i - 1;
-            while (j >= 0 && array[j] > key) {
-                array[j + 1] = array[j];
-                j--;
+        int k = 0;
+        for (int j = 1; j < array.length; j++) {
+            int key = array[j];
+            int i = j - 1;
+            while (i >= 0 && array[i] > key) {
+                array[i + 1] = array[i];
+                i--;
+                k++;
             }
-            array[j + 1] = key;
+            k++;
+            array[i + 1] = key;
         }
+        System.out.println("Did " + k + " comparisons to finish sorting this array of size: " + array.length);
         return array;
     }
 
     public static void main(String... args) {
-        int[] input = new int[]{5, 2, 4, 6, 1, 3};
+        int[] input = new int[]{3, 1, 4, 5, 2};
         CommonUtils.printArray("Before sorting: ", input);
         int[] sorted = insertionSort(input);
         CommonUtils.printArray("After sorting:", sorted);
+        input = new int[]{5, 4, 3, 2, 1};
+        insertionSort(input);
+        input = new int[]{1, 2, 3, 4, 5};
+        insertionSort(input);
 
     }
 }
