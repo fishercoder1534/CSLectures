@@ -1,5 +1,7 @@
-plugins {
-    id 'java'
+allprojects {
+    apply plugin: 'java'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 }
 
 group 'org.example'
