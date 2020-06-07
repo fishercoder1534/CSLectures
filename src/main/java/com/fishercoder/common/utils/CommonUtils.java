@@ -30,6 +30,11 @@ public class CommonUtils {
         System.out.println();
     }
 
+    public static void printArray(String context, int[] nums) {
+        System.out.println(context);
+        printArray(nums);
+    }
+
     public static void print2DIntArray(int[][] nums) {
         for (int[] array : nums) {
             for (int i : array) {
