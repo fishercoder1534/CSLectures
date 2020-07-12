@@ -9,10 +9,10 @@ public class MergeSort {
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
     public static int[] mergeSort(int[] array) {
-        if (array.length < 2) {
+        int n = array.length;
+        if (n < 2) {
             return array;
         }
-        int n = array.length;
         int mid = n / 2;
         int[] left = new int[mid];
         int[] right = new int[n - mid];
@@ -29,22 +29,22 @@ public class MergeSort {
         return array;
     }
 
-    private static void merge(int[] array, int[] left, int[] right, int leftIndex, int rightIndex) {
-        int i = 0;
-        int j = 0;
-        int k = 0;
-        while (i < leftIndex && j < rightIndex) {
-            if (left[i] <= right[j]) {
-                array[k++] = left[i++];
+    private static void merge(int[] array, int[] left, int[] right, int leftBoundary, int rightBoundary) {
+        int leftIndex = 0;
+        int rightIndex = 0;
+        int arrayIndex = 0;
+        while (leftIndex < leftBoundary && rightIndex < rightBoundary) {
+            if (left[leftIndex] < right[rightIndex]) {
+                array[arrayIndex++] = left[leftIndex++];
             } else {
-                array[k++] = right[j++];
+                array[arrayIndex++] = right[rightIndex++];
             }
         }
-        while (i < leftIndex) {
-            array[k++] = left[i++];
+        while (leftIndex < leftBoundary) {
+            array[arrayIndex++] = left[leftIndex++];
         }
-        while (j < rightIndex) {
-            array[k++] = right[j++];
+        while (rightIndex < rightBoundary) {
+            array[arrayIndex++] = right[rightIndex++];
         }
     }
 
