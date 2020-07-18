@@ -27,11 +27,9 @@ public class HeapSort {
     private static void maxHeapify(int[] array, int parentIndex, int indexLimit) {
         int leftChildIndex = 2 * parentIndex + 1;
         int rightChildIndex = 2 * parentIndex + 2;
-        int maxIndex;
+        int maxIndex = parentIndex;
         if (leftChildIndex <= indexLimit && array[leftChildIndex] > array[parentIndex]) {
             maxIndex = leftChildIndex;
-        } else {
-            maxIndex = parentIndex;
         }
 
         if (rightChildIndex <= indexLimit && array[rightChildIndex] > array[maxIndex]) {
@@ -60,4 +58,5 @@ public class HeapSort {
         input = new int[]{1, 2, 3, 4, 5};
         heapSort(input);
     }
+
 }
