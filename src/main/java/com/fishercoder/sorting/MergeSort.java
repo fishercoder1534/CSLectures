@@ -52,7 +52,16 @@ public class MergeSort {
         MergeSort mergeSort = new MergeSort();
         int[] input = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
         CommonUtils.printArray("Before sorting: ", input);
-        int[] sorted = mergeSort.mergeSort(input);
+        int[] sorted = mergeSort.mergeSortEntry(input);
         CommonUtils.printArray("After sorting:", sorted);
+    }
+
+    public int[] mergeSortEntry(int[] array) {
+        long start = System.currentTimeMillis();
+        mergeSort(array);
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.println("It took " + elapsedTime + " milliseconds to finish merge sort on this data set of size: " + array.length);
+        return array;
     }
 }
