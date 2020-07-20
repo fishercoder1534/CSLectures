@@ -8,7 +8,7 @@ public class InsertionSort {
      * To verify its correctness of sorting,
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
-    public static int[] insertionSort(int[] array) {
+    public int[] insertionSort(int[] array) {
         int k = 0;
         for (int j = 1; j < array.length; j++) {
             int key = array[j];
@@ -26,13 +26,14 @@ public class InsertionSort {
     }
 
     public static void main(String... args) {
+        InsertionSort insertionSort = new InsertionSort();
         int[] input = new int[]{3, 1, 4, 5, 2};
         CommonUtils.printArray("Before sorting: ", input);
-        int[] sorted = insertionSort(input);
+        int[] sorted = insertionSort.insertionSort(input);
         CommonUtils.printArray("After sorting:", sorted);
         input = new int[]{5, 4, 3, 2, 1};
-        insertionSort(input);
+        insertionSort.insertionSort(input);
         input = new int[]{1, 2, 3, 4, 5};
-        insertionSort(input);
+        insertionSort.insertionSort(input);
     }
 }
