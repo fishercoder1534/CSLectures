@@ -53,7 +53,7 @@ public class SortingAlgorithmsComparison {
             if (dataType.equals(RANDOM)) {
                 for (String dataSize : dataSizes) {
                     //TODO: fix for data size greater than ten k
-                    if (dataSize.equals(oneK)) {
+                    if (dataSize.equals(twoK)) {
                         int[] inputArray = sortingAlgorithmsComparison.getInputArray(Integer.parseInt(dataSize), DIRECTORY + dataType);
                         System.out.println("For " + dataType + ", sorting algos performance below:");
                         for (String sortingAlgo : sortingAlgos) {
