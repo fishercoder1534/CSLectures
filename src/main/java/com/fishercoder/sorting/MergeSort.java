@@ -8,7 +8,7 @@ public class MergeSort {
      * To verify its correctness of sorting,
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
-    public static int[] mergeSort(int[] array) {
+    public int[] mergeSort(int[] array) {
         int n = array.length;
         if (n < 2) {
             return array;
@@ -29,7 +29,7 @@ public class MergeSort {
         return array;
     }
 
-    private static void merge(int[] array, int[] left, int[] right, int leftBoundary, int rightBoundary) {
+    private void merge(int[] array, int[] left, int[] right, int leftBoundary, int rightBoundary) {
         int leftIndex = 0;
         int rightIndex = 0;
         int arrayIndex = 0;
@@ -49,9 +49,10 @@ public class MergeSort {
     }
 
     public static void main(String... args) {
+        MergeSort mergeSort = new MergeSort();
         int[] input = new int[]{6, 5, 3, 1, 8, 7, 2, 4};
         CommonUtils.printArray("Before sorting: ", input);
-        int[] sorted = mergeSort(input);
+        int[] sorted = mergeSort.mergeSort(input);
         CommonUtils.printArray("After sorting:", sorted);
     }
 }
