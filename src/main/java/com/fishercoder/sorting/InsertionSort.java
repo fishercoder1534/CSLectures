@@ -9,6 +9,7 @@ public class InsertionSort {
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
     public int[] insertionSort(int[] array) {
+        long start = System.currentTimeMillis();
         int k = 0;
         for (int j = 1; j < array.length; j++) {
             int key = array[j];
@@ -21,6 +22,9 @@ public class InsertionSort {
             k++;
             array[i + 1] = key;
         }
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.println("It took " + elapsedTime + " milliseconds to finish insertion sort on this data set of size: " + array.length);
         System.out.println("Did " + k + " comparisons to finish sorting this array of size: " + array.length);
         return array;
     }
