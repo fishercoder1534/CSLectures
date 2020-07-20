@@ -8,6 +8,7 @@ public class HeapSort {
      * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
      */
     public int[] heapSort(int[] array) {
+        long start = System.currentTimeMillis();
         buildMaxHeap(array);
         int heapSize = array.length - 1;
         for (int i = heapSize; i > 0; i--) {
@@ -15,6 +16,9 @@ public class HeapSort {
             heapSize--;
             maxHeapify(array, 0, heapSize);
         }
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.println("It took " + elapsedTime + " milliseconds to finish heap sort on this data set of size: " + array.length);
         return array;
     }
 
