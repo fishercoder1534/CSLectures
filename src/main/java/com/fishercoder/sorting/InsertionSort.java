@@ -25,7 +25,6 @@ public class InsertionSort {
         long end = System.currentTimeMillis();
         long elapsedTime = end - start;
         System.out.println("It took " + elapsedTime + " milliseconds to finish insertion sort on this data set of size: " + array.length);
-        System.out.println("Did " + k + " comparisons to finish sorting this array using insertion sort of size: " + array.length);
         return array;
     }
 
