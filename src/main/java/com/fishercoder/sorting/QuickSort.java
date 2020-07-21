@@ -47,19 +47,9 @@ public class QuickSort {
 
     public static void main(String... args) {
         QuickSort quickSort = new QuickSort();
-        int[] input = new int[]{3, 1, 4, 5, 2};
+        int[] input = new int[]{2, 8, 7, 1, 3, 5, 6, 3};
         CommonUtils.printArray("Before sorting: ", input);
         int[] sorted = quickSort.quickSort(input);
-        CommonUtils.printArray("After sorting:", sorted);
-
-        input = new int[]{5, 4, 3, 2, 1};
-        CommonUtils.printArray("Before sorting: ", input);
-        sorted = quickSort.quickSort(input);
-        CommonUtils.printArray("After sorting:", sorted);
-
-        input = new int[]{1, 2, 3, 4, 5};
-        CommonUtils.printArray("Before sorting: ", input);
-        sorted = quickSort.quickSort(input);
         CommonUtils.printArray("After sorting:", sorted);
     }
 }
