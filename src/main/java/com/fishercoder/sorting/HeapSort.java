@@ -5,7 +5,7 @@ import com.fishercoder.common.utils.CommonUtils;
 public class HeapSort {
     /**
      * To verify its correctness of sorting,
-     * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
+     * I've used this: https://leetcode.com/problems/sort-an-array/
      */
     public int[] heapSort(int[] array) {
         long start = System.currentTimeMillis();
