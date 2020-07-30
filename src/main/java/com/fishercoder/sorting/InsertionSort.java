@@ -6,7 +6,7 @@ public class InsertionSort {
 
     /**
      * To verify its correctness of sorting,
-     * I've used this: https://leetcode.com/problems/largest-perimeter-triangle/
+     * I've used this: https://leetcode.com/problems/sort-an-array/
      */
     public int[] insertionSort(int[] array) {
         long start = System.currentTimeMillis();
